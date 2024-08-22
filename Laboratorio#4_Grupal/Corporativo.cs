@@ -9,5 +9,11 @@ namespace Laboratorio_4_Grupal
     internal class Corporativo : Contacto
     {
         private string InformacionDeContacto { get; set; }
+        public Corporativo(string nombre, int numeroTelefono, string direccion, string redSocial)
+            : base(nombre, numeroTelefono, direccion)
+        {
+            this.InformacionDeContacto = redSocial;
+        }
+
     }
 }

@@ -11,7 +11,12 @@ namespace Laboratorio_4_Grupal
         public string Nombre { get; set; }
         private int NumeroDeTelefono { get; set;}
         private string Direccion { get; set; }
-
+        public Contacto(string nombre, int numeroTelefono, string direccion) 
+        {
+            this.Nombre = nombre;
+            this.NumeroDeTelefono = numeroTelefono;
+            this.Direccion = direccion;
+        }
         public Contacto()
         {
             
