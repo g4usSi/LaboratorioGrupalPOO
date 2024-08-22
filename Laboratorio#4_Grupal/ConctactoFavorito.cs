@@ -12,10 +12,12 @@ namespace Laboratorio_4_Grupal
         public ConctactoFavorito(string nombre, int numeroTelefono, string direccion, int diasRacha)
         : base(nombre, numeroTelefono, direccion)
         {
-            this.DiasDeRacha = diasRacha;
+            this.DiasDeRacha = 0;
         }
-
-
+        public ConctactoFavorito()
+        {
+            this.DiasDeRacha = 0;
+        }    
     }
 
 }
