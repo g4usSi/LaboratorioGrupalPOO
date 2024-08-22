@@ -21,7 +21,7 @@ namespace Laboratorio_4_Grupal
                         numeroEntero = Convert.ToInt32(Console.ReadLine());
                         if (numeroEntero <= 0)
                         {
-                            Console.Write("No puede ingresar numeros negativos...\nIntente de nuevo: ");
+                            Console.Write("[!] No puede ingresar numeros negativos...\nIntente de nuevo: ");
                         }
                         valido = true;
                     }
