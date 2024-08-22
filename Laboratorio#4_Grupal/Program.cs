@@ -2,6 +2,8 @@
 using Laboratorio_4_Grupal;
 
 Contacto contacto = new Contacto(); 
+List<Contacto> listaContactos = new List<Contacto>();
+
 
 Console.WriteLine("ingrese un numero");
 int opcion = Utilidades.LlenarNumeroEntero();

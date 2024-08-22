@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Laboratorio_4_Grupal
 {
-    internal class ConctactoFavorito: Contacto
+    internal class ConctactoFavorito : Contacto
     {
         public int DiasDeRacha { get; set; }
         public ConctactoFavorito(string nombre, int numeroTelefono, string direccion, int diasRacha)
@@ -17,7 +17,15 @@ namespace Laboratorio_4_Grupal
         public ConctactoFavorito()
         {
             this.DiasDeRacha = 0;
-        }    
+        }
+        public override void MostrarContacto()
+        {
+            base.MostrarContacto();
+            this.DiasDeRacha++;
+            Console.Write("Los dias de racha son: ");
+        }
+
+
     }
 
 }

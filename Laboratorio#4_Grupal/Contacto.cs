@@ -17,10 +17,68 @@ namespace Laboratorio_4_Grupal
             this.NumeroDeTelefono = numeroTelefono;
             this.Direccion = direccion;
         }
-        public Contacto()
+        public Contacto() { }
+        public virtual void AgregarContacto()
+        {
+            Console.Write("Ingrese el nombre: ");
+                this.Nombre = Utilidades.LlenarString();
+            Console.Write("Ingrese el numero de telefono: ");
+                this.NumeroDeTelefono = Utilidades.LlenarNumeroEntero();
+            Console.Write("Ingrese la direccion: ");
+                this.Direccion = Utilidades.LlenarString();
+        }
+        public virtual void MostrarContacto(Contacto contactoActual)
+        {
+            if (contactoActual != null)
+            {
+                Console.WriteLine($"Nombre: {contactoActual.Nombre}");
+                Console.WriteLine($"Numero de Telefono: {contactoActual.NumeroDeTelefono}");
+                Console.WriteLine($"Direccion: {contactoActual.Direccion}");
+            }
+            else
+            {
+                return;
+            }
+        }
+        public void MostrarTodosContactos()
+        {
+
+        }
+        public virtual void EliminarContacto()
         {
             
         }
+        //Modificar
+        public virtual void ModificarNumero(Contacto contactoActual) 
+        {
+            if (contactoActual != null)
+            {
+                contactoActual.MostrarContacto(contactoActual);
+                Console.WriteLine();
+                Console.WriteLine($"Ingrese el nuevo numero de telefono: ");
+                contactoActual.NumeroDeTelefono = Utilidades.LlenarNumeroEntero();
+            }
+            else
+            {
+                return;
+            }
+        }
+        public Contacto BuscarContacto(List<Contacto> listaContactos) 
+        {
+            Console.Write("Ingrese el nombre: ");
+            string nombreBuscar = Utilidades.LlenarString();
+            foreach (var contactoBuscar in listaContactos) 
+            {
+                if (contactoBuscar.Nombre == nombreBuscar) 
+                { 
+                    return contactoBuscar;
+                }
+            }
+            return null;
+        }
+
+
+
         public string ObtenerNombre()
         {
             return Nombre;
@@ -33,21 +91,6 @@ namespace Laboratorio_4_Grupal
         public string ObtenerDireccion()
         {
             return Direccion;
-        }
-
-        public void AgregarContacto()
-        {
-
-        }
-
-        public void MostrarContacto()
-        {
-
-        }
-
-        public void EliminarContacto()
-        {
-
         }
 
     }
