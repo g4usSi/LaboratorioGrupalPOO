@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Laboratorio_4_Grupal
 {
-    internal class Contacto
+    public class Contacto
     {
         public string Nombre { get; set; }
         private int NumeroDeTelefono { get; set;}
