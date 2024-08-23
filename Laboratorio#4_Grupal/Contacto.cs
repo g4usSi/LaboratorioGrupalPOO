@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Laboratorio_4_Grupal
 {
-    internal class Contacto
+    public class Contacto
     {
         public string Nombre { get; set; }
         private int NumeroDeTelefono { get; set;}
@@ -22,9 +22,9 @@ namespace Laboratorio_4_Grupal
         {
             Console.Write("Ingrese el nombre: ");
                 this.Nombre = Utilidades.LlenarString();
-            Console.Write("Ingrese el numero de telefono: ");
+            Console.Write("Ingrese el numero de teléfono: ");
                 this.NumeroDeTelefono = Utilidades.LlenarNumeroEntero();
-            Console.Write("Ingrese la direccion: ");
+            Console.Write("Ingrese la dirección: ");
                 this.Direccion = Utilidades.LlenarString();
         }
         public virtual void MostrarContacto(Contacto contactoActual)
