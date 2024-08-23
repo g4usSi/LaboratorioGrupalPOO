@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using Laboratorio_4_Grupal;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Laboratorio_4_Grupal
 {
@@ -58,7 +59,8 @@ namespace Laboratorio_4_Grupal
 
                         break;
                     case 5:
-
+                        Console.Clear();
+                        EliminarContacto(listaContactos);
                         break;
                     case 6:
                         continuar = false;
@@ -90,6 +92,27 @@ namespace Laboratorio_4_Grupal
                 Console.WriteLine();
             }
 
+        }
+
+        public static void EliminarContacto(List<Contacto> contactos)
+        { bool existe = false;
+            Console.WriteLine("Ingrese el nombre del contacto que desea eliminar");
+             string nombre=Console.ReadLine();
+            foreach (var contacto in contactos)
+            {
+                if (contacto.ExisteContacto(nombre) == true)
+                {
+                    int posicion = contactos.IndexOf(contacto);
+                    contactos.RemoveAt(posicion);
+                    Console.WriteLine("Se elimino el contacto");
+                    existe = true;
+                    break;
+                }
+            }
+           if (existe==false)
+            {
+                Console.WriteLine("No existe el contacto");
+            }
         }
 
 

@@ -21,7 +21,7 @@ namespace Laboratorio_4_Grupal
         public virtual void AgregarContacto()
         {
             Console.Write("Ingrese el nombre: ");
-                this.Nombre = Utilidades.LlenarString();
+                this.Nombre = Utilidades.LlenarString().ToLower();
             Console.Write("Ingrese el numero de teléfono: ");
                 this.NumeroDeTelefono = Utilidades.LlenarNumeroEntero();
             Console.Write("Ingrese la dirección: ");
@@ -44,6 +44,17 @@ namespace Laboratorio_4_Grupal
         public virtual void EliminarContacto()
         {
             
+        }
+        public bool ExisteContacto(string nombre)
+        {
+            bool existe = true;
+
+            if (Nombre != nombre)
+            {
+                existe = false;
+            }
+            return existe;
+
         }
         //Modificar
         public virtual void ModificarNumero(Contacto contactoActual) 
