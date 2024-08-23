@@ -10,7 +10,7 @@ namespace Laboratorio_4_Grupal
     public class ContactoCorporativo : Contacto
     {
         public string CorreoElectronico {  get; set; }
-        public string NombreEmpresa { get; set; }
+        private string NombreEmpresa { get; set; }
         private string Cargo { get; set; }
         public ContactoCorporativo(string nombre, int numeroTelefono, string direccion, string NombreEmpresa, string Cargo, string CorreoElectronico)
             : base(nombre, numeroTelefono, direccion)
