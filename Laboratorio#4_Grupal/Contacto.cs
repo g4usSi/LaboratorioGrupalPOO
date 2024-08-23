@@ -42,18 +42,35 @@ namespace Laboratorio_4_Grupal
         }
         public void MostrarTodosContactos(List<Contacto> listaContactos)
         {
-            foreach (var contactoActual in listaContactos) 
+            if (listaContactos != null && listaContactos.Count > 0)
             {
-                if () 
-                { 
-                
+                foreach (var contactoActual in listaContactos)
+                {
+                    contactoActual.MostrarContacto();
+                    Console.WriteLine("-----------------------");
                 }
-            
+            }
+            else
+            {
+                Console.WriteLine("No hay contactos para mostrar.");
             }
         }
-        public virtual void EliminarContacto()
+
+        public virtual void EliminarContacto(List<Contacto> listaContactos)
         {
-            
+            Console.Write("Ingrese el nombre del contacto a eliminar: ");
+            string nombreEliminar = Utilidades.LlenarString();
+            var contactoAEliminar = listaContactos.Find(c => c.Nombre == nombreEliminar);
+
+            if (contactoAEliminar != null)
+            {
+                listaContactos.Remove(contactoAEliminar);
+                Console.WriteLine("Contacto eliminado.");
+            }
+            else
+            {
+                Console.WriteLine("No se encontró el contacto.");
+            }
         }
         //Modificar
         public virtual void ModificarNumero(Contacto contactoActual) 
@@ -83,8 +100,6 @@ namespace Laboratorio_4_Grupal
             }
             return null;
         }
-
-
 
         public string ObtenerNombre()
         {
