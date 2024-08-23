@@ -55,19 +55,6 @@ namespace Laboratorio_4_Grupal
 
        
 
-            Console.Write("Ingrese el nombre de la empresa: ");
-            string empresaBuscar = Utilidades.LlenarString();
-
-            foreach (var contactoBuscar in listaContactosCorporativos)
-            {
-                if (contactoBuscar.NombreEmpresa == empresaBuscar)
-                {
-                    return contactoBuscar;
-                }
-            }
-
-            return null;
-        }
 
     }
 }
