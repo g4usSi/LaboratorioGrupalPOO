@@ -6,23 +6,21 @@ using System.Threading.Tasks;
 
 namespace Laboratorio_4_Grupal
 {
-    public class ConctactoFavorito : Contacto
+    public class ContactoFavorito : Contacto
     {
         public int DiasDeRacha { get; set; }
-        public ConctactoFavorito(string nombre, int numeroTelefono, string direccion, int diasRacha)
+        public ContactoFavorito(string nombre, int numeroTelefono, string direccion, int diasRacha)
         : base(nombre, numeroTelefono, direccion)
         {
-            this.DiasDeRacha = 0;
+            this.DiasDeRacha = diasRacha;
         }
-        public ConctactoFavorito()
+        public ContactoFavorito()
         {
             this.DiasDeRacha = 0;
         }
         public override void MostrarContacto(Contacto contactoActual)
         {
             base.MostrarContacto(contactoActual);
-            this.DiasDeRacha++;
-            Console.Write("Los dias de racha son: ");
             MostrarRacha(contactoActual);
         }
 
@@ -38,11 +36,13 @@ namespace Laboratorio_4_Grupal
             base.ModificarNumero(contactoActual);
         }
 
-        private void MostrarRacha (Co)
+        private void MostrarRacha (Contacto contacto)
         {
-            
-            this.DiasDeRacha++;
-            Console.WriteLine($"LOS DIAS DE RACHA CON ESTE CONTACTO: {DiasDeRacha}  ");
+            if (contacto is ContactoFavorito favorito)
+            {
+                favorito.DiasDeRacha++;
+                Console.WriteLine($"LOS DIAS DE RACHA CON ESTE CONTACTO: {DiasDeRacha} ");
+            }
         }
     }
 
