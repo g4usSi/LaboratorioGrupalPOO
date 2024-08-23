@@ -9,6 +9,7 @@ namespace Laboratorio_4_Grupal
     public class Amigo : Contacto
     {
         private string RedesSociales { get; set; }
+
         public Amigo(string nombre, int numeroTelefono, string direccion, string redSocial)
             :base(nombre, numeroTelefono, direccion)
         {
@@ -29,7 +30,7 @@ namespace Laboratorio_4_Grupal
             base.MostrarContacto(contactoActual);
             if (contactoActual is Amigo contactoactual)
             {
-                Console.WriteLine($"Red {RedesSociales}");
+                Console.WriteLine($"Red: {RedesSociales}");
             }
         }
 
