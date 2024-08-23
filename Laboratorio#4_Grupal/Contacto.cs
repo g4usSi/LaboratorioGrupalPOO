@@ -37,6 +37,7 @@ namespace Laboratorio_4_Grupal
             }
             else
             {
+                Console.WriteLine("No existe el contacto...");
                 return;
             }
         }
@@ -95,6 +96,7 @@ namespace Laboratorio_4_Grupal
                     return contactoBuscar;
                 }
             }
+            
             return null;
         }
 
