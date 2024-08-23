@@ -79,6 +79,8 @@ namespace Laboratorio_4_Grupal
             }
             else
             {
+                Console.WriteLine("No se han encontrado coincidencias...");
+                Console.WriteLine();
                 return;
             }
         }

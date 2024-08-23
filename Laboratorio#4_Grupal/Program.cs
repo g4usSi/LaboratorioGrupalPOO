@@ -75,7 +75,7 @@ namespace Laboratorio_4_Grupal
                         contacto.MostrarContacto(contacto.BuscarContacto(listaContactos));
                         break;
                     case 4:
-
+                        contacto.ModificarNumero(contacto.BuscarContacto(listaContactos));
                         break;
                     case 5:
                         Console.Clear();
