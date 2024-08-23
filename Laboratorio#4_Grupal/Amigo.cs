@@ -37,20 +37,5 @@ namespace Laboratorio_4_Grupal
         {
             base.ModificarNumero(contactoActual);
         }
-
-        public Amigo BuscarContactoCorporativo(List<Amigo> listaContactos)
-        {
-            Console.Write("Ingrese el nombre de la empresa: ");
-            string buscaramigo = Utilidades.LlenarString();
-
-            foreach (var contactoBuscar in listaContactos)
-            {
-                if (contactoBuscar.Nombre == buscaramigo)
-                {
-                    return contactoBuscar;
-                }
-            }
-            return null;
-        }
     }
 }
