@@ -46,7 +46,7 @@ namespace Laboratorio_4_Grupal
                                 Console.WriteLine();
                                 break;
                             case 3:
-                                Amigo nuevoAmigo = new Amigo();
+                                Amigos nuevoAmigo = new Amigo();
                                 nuevoAmigo.AgregarContacto();
                                 listaContactos.Add(nuevoAmigo);
                                 Console.WriteLine("Se agrego correctamente");
@@ -67,7 +67,7 @@ namespace Laboratorio_4_Grupal
                         contacto.MostrarContacto(contacto.BuscarContacto(listaContactos));
                         break;
                     case 4:
-
+                        contacto.ModificarNumero(contacto.BuscarContacto(listaContactos));
                         break;
                     case 5:
                         Console.Clear();
