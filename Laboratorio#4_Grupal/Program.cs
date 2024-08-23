@@ -10,6 +10,7 @@ namespace Laboratorio_4_Grupal
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Agenda Telefonica");
             Contacto contacto = new Contacto();
             List<Contacto> listaContactos = new List<Contacto>();
             listaContactos.Add(new ContactoFavorito("Moises Granados",666,"Puente Maldonado", 1096));
