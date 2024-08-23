@@ -44,6 +44,17 @@ namespace Laboratorio_4_Grupal
                                 Console.WriteLine("Se agrego correctamente");
                                 Console.WriteLine();
                                 break;
+                            case 3:
+                                Amigos nuevoAmigo = new Amigo();
+                                nuevoAmigo.AgregarContacto();
+                                listaContactos.Add(nuevoAmigo);
+                                Console.WriteLine("Se agrego correctamente");
+                                Console.WriteLine();
+                                break;
+                            default:
+                                Console.Clear();
+                                Console.WriteLine("No ha ingresado una opcion valida...");
+                                break;
                         }
                         break;
                     case 2:
@@ -73,7 +84,8 @@ namespace Laboratorio_4_Grupal
         public static int AgregarContacto()
         {
             Console.WriteLine("1. Corporativo");
-            Console.WriteLine("2. favoritos");
+            Console.WriteLine("2. Favoritos");
+            Console.WriteLine("3. Amigos");
             int opcion = Utilidades.LlenarNumeroEntero();
 
             return opcion;
