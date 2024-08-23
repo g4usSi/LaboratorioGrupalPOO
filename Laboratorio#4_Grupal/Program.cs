@@ -45,14 +45,14 @@ namespace Laboratorio_4_Grupal
                                 Console.WriteLine();
                                 break;
                         }
-
                         break;
                     case 2:
                         Console.Clear();
                         MostrarTodosContactos(listaContactos);
                         break;
                     case 3:
-
+                        Console.Clear();
+                        contacto.MostrarContacto(contacto.BuscarContacto(listaContactos));
                         break;
                     case 4:
 
