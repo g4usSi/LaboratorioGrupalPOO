@@ -19,30 +19,48 @@ namespace Laboratorio_4_Grupal
             this.Cargo = Cargo;
             this.CorreoElectronico = CorreoElectronico;
         }
-        public string ObtenerNombreEmpresa()
+
+        public override void AgregarContacto()
         {
-            return NombreEmpresa;
+            base.AgregarContacto();
+            Console.Write("Ingrese el nombre de la empresa: ");
+            this.NombreEmpresa = Utilidades.LlenarString();
+            Console.Write("Ingrese el cargo: ");
+            this.Cargo = Utilidades.LlenarString();
+            Console.Write("Ingrese el correo electrónico: ");
+            this.CorreoElectronico = Utilidades.LlenarString();
         }
 
-        public string ObtenerCargo()
+        public override void MostrarContacto(Contacto contactoActual)
         {
-            return Cargo;
+            base.MostrarContacto(contactoActual);
+            if (contactoActual is ContactoCorporativo contactoCorporativo)
+            {
+                Console.WriteLine($"Nombre de la Empresa: {contactoCorporativo.NombreEmpresa}");
+                Console.WriteLine($"Cargo: {contactoCorporativo.Cargo}");
+                Console.WriteLine($"Correo Electrónico: {contactoCorporativo.CorreoElectronico}");
+            }
         }
-        public string ObtenerCorreoElectronico()
+
+        public override void ModificarNumero(Contacto contactoActual)
         {
-            return CorreoElectronico;
+            base.ModificarNumero(contactoActual);
         }
 
-
-        public void MostrarContactoCorporativo()
+        public ContactoCorporativo BuscarContactoCorporativo(List<ContactoCorporativo> listaContactosCorporativos)
         {
-            Console.WriteLine($"Nombre: {ObtenerNombre()}");
-            Console.WriteLine($"Teléfono: {ObtenerNumeroTelefono()}");
-            Console.WriteLine($"Dirección: {ObtenerDireccion()}");
-            Console.WriteLine($"Empresa: {ObtenerNombreEmpresa()}");
-            Console.WriteLine($"Cargo: {ObtenerCargo()}");
-            Console.WriteLine($"Correo Electrónico: {ObtenerCorreoElectronico()}");
+            Console.Write("Ingrese el nombre de la empresa: ");
+            string empresaBuscar = Utilidades.LlenarString();
 
+            foreach (var contactoBuscar in listaContactosCorporativos)
+            {
+                if (contactoBuscar.NombreEmpresa == empresaBuscar)
+                {
+                    return contactoBuscar;
+                }
+            }
+
+            return null;
         }
 
     }
