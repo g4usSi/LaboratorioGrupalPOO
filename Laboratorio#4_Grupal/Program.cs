@@ -18,8 +18,6 @@ namespace Laboratorio_4_Grupal
             //listaContactos.Add(new ContactoFavorito("Moises",666,"abajo de un puente",0));
             //listaContactos.Add(new ContactoFavorito("Moises",666,"abajo de un puente",0));
 
-
-
             bool continuar = true;
             do
             {
