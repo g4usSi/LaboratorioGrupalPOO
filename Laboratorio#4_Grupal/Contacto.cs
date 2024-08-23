@@ -56,22 +56,6 @@ namespace Laboratorio_4_Grupal
             }
         }
 
-        public virtual void EliminarContacto(List<Contacto> listaContactos)
-        {
-            Console.Write("Ingrese el nombre del contacto a eliminar: ");
-            string nombreEliminar = Utilidades.LlenarString();
-            var contactoAEliminar = listaContactos.Find(c => c.Nombre == nombreEliminar);
-
-            if (contactoAEliminar != null)
-            {
-                listaContactos.Remove(contactoAEliminar);
-                Console.WriteLine("Contacto eliminado.");
-            }
-            else
-            {
-                Console.WriteLine("No se encontró el contacto.");
-            }
-        }
         public bool ExisteContacto(string nombre)
         {
             bool existe = true;
@@ -110,20 +94,6 @@ namespace Laboratorio_4_Grupal
                 }
             }
             return null;
-        }
-
-        public string ObtenerNombre()
-        {
-            return Nombre;
-        }
-        public int ObtenerNumeroTelefono()
-        {
-            return NumeroDeTelefono;
-        }
-
-        public string ObtenerDireccion()
-        {
-            return Direccion;
         }
 
     }

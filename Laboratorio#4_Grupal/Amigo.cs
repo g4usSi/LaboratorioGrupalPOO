@@ -14,7 +14,10 @@ namespace Laboratorio_4_Grupal
         {
             this.RedesSociales = redSocial;
         }
-
+        public Amigo()
+        {
+            
+        }
 
     }
 }
