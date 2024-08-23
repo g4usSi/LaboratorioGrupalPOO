@@ -46,7 +46,7 @@ namespace Laboratorio_4_Grupal
             {
                 foreach (var contactoActual in listaContactos)
                 {
-                    contactoActual.MostrarContacto();
+                    contactoActual.MostrarContacto(contactoActual);
                     Console.WriteLine("-----------------------");
                 }
             }
