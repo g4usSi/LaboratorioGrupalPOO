@@ -10,12 +10,13 @@ namespace Laboratorio_4_Grupal
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Agenda Telefonica");
             Contacto contacto = new Contacto();
             List<Contacto> listaContactos = new List<Contacto>();
-            listaContactos.Add(new ContactoFavorito("Moises Granados",666,"abajo de un puente",1095));
-            listaContactos.Add(new ContactoCorporativo("Oliver Sierra",777,"Mancion al lado de bill Gates","GOOGLE", "INGENIEBRIO", "Olver@mail.com"));
-            listaContactos.Add(new ContactoFavorito("Alvarito Flores",2555,"Casa Comun",0));
-            //listaContactos.Add(new ContactoFavorito("Moises",666,"abajo de un puente",0));
+            listaContactos.Add(new ContactoFavorito("Moises Granados",666,"Puente Maldonado", 1096));
+            listaContactos.Add(new ContactoCorporativo("Oliver Sierra",777,"Av. 3, Zona 2, Quetzaltenango","Google inc.", "Ingeniero", "Oliver@gmail.com"));
+            listaContactos.Add(new ContactoFavorito("Alvarito Flores",2555,"Casa Las Flores", 5));
+            listaContactos.Add(new Amigo("Daniel Lopez",5678,"Av. Centro America","@LopezDaaa_96"));
             //listaContactos.Add(new ContactoFavorito("Moises",666,"abajo de un puente",0));
 
             bool continuar = true;
