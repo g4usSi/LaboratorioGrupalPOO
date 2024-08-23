@@ -20,6 +20,10 @@ namespace Laboratorio_4_Grupal
             this.CorreoElectronico = CorreoElectronico;
         }
 
+        public ContactoCorporativo()
+        {
+        }
+
         public override void AgregarContacto()
         {
             base.AgregarContacto();

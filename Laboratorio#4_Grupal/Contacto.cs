@@ -40,17 +40,7 @@ namespace Laboratorio_4_Grupal
                 return;
             }
         }
-        public void MostrarTodosContactos(List<Contacto> listaContactos)
-        {
-            foreach (var contactoActual in listaContactos) 
-            {
-                if () 
-                { 
-                
-                }
-            
-            }
-        }
+        
         public virtual void EliminarContacto()
         {
             
