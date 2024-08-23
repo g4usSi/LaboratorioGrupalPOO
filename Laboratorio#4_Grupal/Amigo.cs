@@ -15,9 +15,42 @@ namespace Laboratorio_4_Grupal
             this.RedesSociales = redSocial;
         }
         public Amigo()
+        {}
+
+        public override void AgregarContacto()
         {
-            
+            base.AgregarContacto();
+            Console.Write("Ingrese la red social  del amigo: ");
+            this.RedesSociales = Utilidades.LlenarString();
         }
 
+        public override void MostrarContacto(Contacto contactoActual)
+        {
+            base.MostrarContacto(contactoActual);
+            if (contactoActual is Amigo contactoactual)
+            {
+                Console.WriteLine($"Red {RedesSociales}");
+            }
+        }
+
+        public override void ModificarNumero(Contacto contactoActual)
+        {
+            base.ModificarNumero(contactoActual);
+        }
+
+        public Amigo BuscarContactoCorporativo(List<Amigo> listaContactos)
+        {
+            Console.Write("Ingrese el nombre de la empresa: ");
+            string buscaramigo = Utilidades.LlenarString();
+
+            foreach (var contactoBuscar in listaContactos)
+            {
+                if (contactoBuscar.Nombre == buscaramigo)
+                {
+                    return contactoBuscar;
+                }
+            }
+            return null;
+        }
     }
 }
