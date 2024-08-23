@@ -21,7 +21,7 @@ namespace Laboratorio_4_Grupal
         public virtual void AgregarContacto()
         {
             Console.Write("Ingrese el nombre: ");
-                this.Nombre = Utilidades.LlenarString();
+                this.Nombre = Utilidades.LlenarString().ToLower();
             Console.Write("Ingrese el numero de teléfono: ");
                 this.NumeroDeTelefono = Utilidades.LlenarNumeroEntero();
             Console.Write("Ingrese la dirección: ");
@@ -56,21 +56,16 @@ namespace Laboratorio_4_Grupal
             }
         }
 
-        public virtual void EliminarContacto(List<Contacto> listaContactos)
+        public bool ExisteContacto(string nombre)
         {
-            Console.Write("Ingrese el nombre del contacto a eliminar: ");
-            string nombreEliminar = Utilidades.LlenarString();
-            var contactoAEliminar = listaContactos.Find(c => c.Nombre == nombreEliminar);
+            bool existe = true;
 
-            if (contactoAEliminar != null)
+            if (Nombre != nombre)
             {
-                listaContactos.Remove(contactoAEliminar);
-                Console.WriteLine("Contacto eliminado.");
+                existe = false;
             }
-            else
-            {
-                Console.WriteLine("No se encontró el contacto.");
-            }
+            return existe;
+
         }
         //Modificar
         public virtual void ModificarNumero(Contacto contactoActual) 
@@ -84,6 +79,8 @@ namespace Laboratorio_4_Grupal
             }
             else
             {
+                Console.WriteLine("No se han encontrado coincidencias...");
+                Console.WriteLine();
                 return;
             }
         }
@@ -99,20 +96,6 @@ namespace Laboratorio_4_Grupal
                 }
             }
             return null;
-        }
-
-        public string ObtenerNombre()
-        {
-            return Nombre;
-        }
-        public int ObtenerNumeroTelefono()
-        {
-            return NumeroDeTelefono;
-        }
-
-        public string ObtenerDireccion()
-        {
-            return Direccion;
         }
 
     }
