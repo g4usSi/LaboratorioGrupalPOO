@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Laboratorio_4_Grupal
 {
-    internal class ContactoCorporativo : Contacto
+    public class ContactoCorporativo : Contacto
     {
         public string CorreoElectronico {  get; set; }
         public string NombreEmpresa { get; set; }
