@@ -82,6 +82,9 @@ namespace Laboratorio_4_Grupal
                     case 6:
                         continuar = false;
                         break;
+                    case 7:
+                        
+                        break;
                     default:
                         Console.WriteLine("Opción no válida");
                         break;

@@ -53,21 +53,7 @@ namespace Laboratorio_4_Grupal
             base.ModificarNumero(contactoActual);
         }
 
-        public ContactoCorporativo BuscarContactoCorporativo(List<ContactoCorporativo> listaContactosCorporativos)
-        {
-            Console.Write("Ingrese el nombre de la empresa: ");
-            string empresaBuscar = Utilidades.LlenarString();
-
-            foreach (var contactoBuscar in listaContactosCorporativos)
-            {
-                if (contactoBuscar.NombreEmpresa == empresaBuscar)
-                {
-                    return contactoBuscar;
-                }
-            }
-
-            return null;
-        }
+       
 
     }
 }
