@@ -37,9 +37,11 @@ namespace Laboratorio_4_Grupal
 
         public override void MostrarContacto(Contacto contactoActual)
         {
+            Console.WriteLine("Contacto Corporativo");
             base.MostrarContacto(contactoActual);
             if (contactoActual is ContactoCorporativo contactoCorporativo)
             {
+                
                 Console.WriteLine($"Nombre de la Empresa: {contactoCorporativo.NombreEmpresa}");
                 Console.WriteLine($"Cargo: {contactoCorporativo.Cargo}");
                 Console.WriteLine($"Correo Electrónico: {contactoCorporativo.CorreoElectronico}");
